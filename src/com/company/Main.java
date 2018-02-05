@@ -26,7 +26,7 @@ public class Main
 
         HikariConfig config = new HikariConfig();
         config.setJdbcUrl(url);
-        config.setMaximumPoolSize(48);
+        config.setMaximumPoolSize(threadCount);
         HikariDataSource dataSource = new HikariDataSource(config);
 
         Runner[] runners = new NonCachingRunner[threadCount];
